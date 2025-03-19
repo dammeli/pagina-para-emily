@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Emily 💖</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .message {
+            font-size: 1.5rem;
+            margin: 20px;
+            max-width: 600px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .heart, .note {
+            position: absolute;
+            bottom: -10px;
+            width: 20px;
+            height: 20px;
+            animation: floatUp 5s linear infinite;
+        }
+        .heart {
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0% 35%);
+        }
+        .note {
+            background-color: white;
+            font-size: 20px;
+            color: #ff4f4f;
+        }
+        @keyframes floatUp {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+        .music-btn {
+            margin-top: 20px;
+            background: white;
+            color: #ff4f4f;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        .hidden-message {
+            display: none;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            max-width: 600px;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #fff;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Para Emily 💖</h1>
+    <p class="message">Eres lo más importante de mi vida y lo más lindo que me ha pasado, esta página es solo una pequeña muestra de lo que significas para mí. ❤️</p>
+    <button class="music-btn" onclick="toggleMusic()">¡Tu canción! 🎵</button>
+    <div class="hearts"></div>
+    <audio id="bg-music" loop>
+        <source src="EMILY-FULL-VERSION.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-btn" onclick="showMessage()">Seguir leyendo 💌</button>
+    <p class="hidden-message" id="hiddenMessage">Sé que arruiné las cosas, pero intento ser mejor por ti. He hecho cosas que jamás hice, por ejemplo, esto. Solo para que veas lo mucho que te quiero y que estoy dispuesto a hacer muchas cosas por ti. <3</p>
+    <p class="footer">(Esta página la hice con ayuda de ChatGPT, pero seguiré practicando para poder hacerte una yo solito :3)</p>
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.querySelector('.hearts').appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        function createNote() {
+            const note = document.createElement('div');
+            note.classList.add('note');
+            note.innerHTML = '♪';
+            note.style.left = Math.random() * 100 + 'vw';
+            note.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.querySelector('.hearts').appendChild(note);
+            setTimeout(() => note.remove(), 5000);
+        }
+        function toggleMusic() {
+            const music = document.getElementById("bg-music");
+            if (music.paused) {
+                music.play();
+                setInterval(createHeart, 300);
+                setInterval(createNote, 500);
+            } else {
+                music.pause();
+            }
+        }
+        function showMessage() {
+            document.getElementById("hiddenMessage").style.display = "block";
+        }
+    </script>
+</body>
+</html>
