@@ -81,6 +81,9 @@
             font-size: 1.2rem;
             margin-top: 20px;
             max-width: 600px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
         }
         .footer {
             margin-top: 40px;
@@ -95,13 +98,93 @@
     <p class="message">Eres lo más importante de mi vida y lo más lindo que me ha pasado, esta página es solo una pequeña muestra de lo que significas para mí. ❤️</p>
     <button class="music-btn" onclick="toggleMusic()">¡Tu canción! 🎵</button>
     <div class="hearts"></div>
+
+    <!-- Audio -->
     <audio id="bg-music" loop>
-        <source src="https://github.com/dammeli/pagina-para-emily/raw/main/EMILY-FULL-VERSION.mp3">
+        <source src="https://github.com/dammeli/pagina-para-emily/raw/main/EMILY-FULL-VERSION.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
     </audio>
+
     <button class="music-btn" onclick="showMessage()">Seguir leyendo 💌</button>
-    <p class="hidden-message" id="hiddenMessage">Sé que arruiné las cosas, pero intento ser mejor por ti. He hecho cosas que jamás hice, por ejemplo, esto. Solo para que veas lo mucho que te quiero y que estoy dispuesto a hacer muchas cosas por ti. <3</p>
+
+    <!-- Mensajes ocultos -->
+    <div class="hidden-message" id="hiddenMessage">
+        <h3>Hola mi niña, Hola Emily</h3>
+        <p>Espero que hayas estado bien estos días sin mi, me preguntó si te ha dolido tanto como a mí, pero bueno no es de lo que te quiero hablar en esta carta.</p>
+        <p>Quería darte las gracias por todo lo vivido, me hiciste sentir cosas que jamás había sentido y viví momentos hermosos junto a ti, le diste color a mi mundo y desde que llegaste todo mejoró para mí, para nosotros. Tuvimos una relación hermosa, una relación como la nuestra casi no se ve hoy en día y espero jamás la olvides, porque yo siempre viviré con tu lindo recuerdo mi niña linda.</p>
+        <p>Me di cuenta de que lo que estaba haciendo estaba mal cuando ya era muy tarde, cuando te herí e incluso les llegué a dar miedo a ti y a tu familia. Yo admito que la cagué, la he cagado muchas pero muchas veces en nuestra relación y ya no me voy a excusar.</p>
+        <p>Empezaré una terapia, para demostrarles a ti y a tu familia, que no soy un mal chico, ni un mal pololo, que sí, actué muy mal muchas veces contigo, eso jamás me lo perdonaré y no tiene justificación alguna, pero se darán cuenta que no soy un psicópata ni una mala persona.</p>
+        <p>Espero puedas estar bien y puedas sentirte feliz aunque no sea conmigo, ahora podrás pasar tiempo con tus amigos, ojalá te vaya muy bien y te saques buenas notas, porque siempre creí en ti, el año pasado no hubo momento en el que no te dijera lo valiente y fuerte que eras, que podías con todo y aún puedes con lo que te propongas.</p>
+        <p>Yo sé que te irá bien este año y yo lucharé para ser mejor por mí, pero sobretodo por ti.</p>
+        <p>Te amo con todo mi corazón Emily, mi corazón siempre será tuyo porque me lo robaste, me enseñaste a amar, me enseñaste a querer, me enseñaste a ver lo bueno de la vida. Contigo aprendí que las cosas no siempre están perdidas, que no todo es imposible, y contigo también me di cuenta que no estoy solo como yo creía, siempre estuviste para mí y eso jamás lo olvidaré. Eres el amor de mi vida y siempre serás mi persona favorita.</p>
+    </div>
+
+    <div class="hidden-message" id="hiddenMessage2">
+        <h3>50 razones para volver a intentarlo</h3>
+        <p>1. Nuestra historia</p>
+        <p>2. Nuestros buenos momentos</p>
+        <p>3. Las sonrisas que nos sacábamos el uno al otro</p>
+        <p>4. Lo felices que éramos en cualquier contexto</p>
+        <p>5. Nuestro futuro juntos</p>
+        <p>6. Nuestros sueños</p>
+        <p>7. Las cosas que planeábamos hacer en el futuro</p>
+        <p>8. Nuestros apodos</p>
+        <p>9. La casa de nuestros sueños</p>
+        <p>10. Llegar hasta viejitos juntos</p>
+        <p>11. Formar nuestra familia</p>
+        <p>12. Nuestro día especial (24)</p>
+        <p>13. Nuestros lugares especiales (burguer, ferroviario)</p>
+        <p>14. Nuestras canciones</p>
+        <p>15. Nuestros hijos (los peluches y gatos)</p>
+        <p>16. Nuestros detalles que nos hemos dado</p>
+        <p>17. Las canciones que me faltaron por dedicarte</p>
+        <p>18. Los besos</p>
+        <p>19. Los abrazos</p>
+        <p>20. Las salidas juntos</p>
+        <p>21. Ir a comer chaparritas después de clases</p>
+        <p>22. Estar los recreos juntos</p>
+        <p>23. Irte a buscar a tu casa e irte a dejar</p>
+        <p>24. Las cartitas</p>
+        <p>25. Los anillos de amor</p>
+        <p>26. Las bromas</p>
+        <p>27. Los días y noches jugando Roblox</p>
+        <p>28. Los días que hacíamos llamada y reíamos</p>
+        <p>29. El oler nuestros perfumes</p>
+        <p>30. Nuestro aniversario</p>
+        <p>31. El sueño de hacer todo juntos</p>
+        <p>32. El sueño de tener una casa con cientos de gatitos y palomas y perritos pug</p>
+        <p>33. Lo felices que éramos</p>
+        <p>34. Las conversaciones sin sentido</p>
+        <p>35. Nuestra conexión</p>
+        <p>36. Las flores que me diste</p>
+        <p>37. Las flores que te di</p>
+        <p>38. Las miradas que decían todo sin decir nada</p>
+        <p>39. Los te amo</p>
+        <p>40. Los te quiero</p>
+        <p>41. Nuestras promesas</p>
+        <p>42. El Mundo que creamos juntos</p>
+        <p>43. La promesa de estar juntos por siempre</p>
+        <p>44. Las citas pendientes</p>
+        <p>45. Las salidas pendientes</p>
+        <p>46. Las mariposas que sentíamos estando juntos</p>
+        <p>47. Las cosas que me faltan conocer de ti</p>
+        <p>48. Las cosas que te faltan conocer de mí</p>
+        <p>49. Contarle a nuestros hijos y nietos como nos conocimos y a pesar de todo pudimos salir adelante juntos</p>
+        <p>50. Eres lo que más amo. Somos el uno para el otro</p>
+    </div>
+
+    <div class="hidden-message" id="hiddenMessage3">
+        <h3>Razón para dejarnos ir</h3>
+        <p>Todo el daño que nos hemos hecho..</p>
+        <p>Es una lástima que tu mamá la haya botado y haya pensado que era manipulacion, pero aunque este equivocada en eso lo entiendo, pero de mi parte te digo que no era por ese motivo que la hice, solo queria asincerarme contigo y darte las gracias por todo lo vivido, hasta te hice un pusheen, esperaba que te pusieras contenta y rieras por lo mal hecho que estaba, pero hice mi mejor intento porque se que te gusta jkdsjk</p>
+        <p>Te querré toda la vida, no te preocupes. Nos veremos pronto.</p>
+    </div>
+
+    <!-- Pie de página -->
     <p class="footer">(Esta página la hice con ayuda de ChatGPT, pero seguiré practicando para poder hacerte una yo solito :3)</p>
+
     <script>
+        // Crear corazones animados
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
@@ -110,6 +193,8 @@
             document.querySelector('.hearts').appendChild(heart);
             setTimeout(() => heart.remove(), 5000);
         }
+
+        // Crear notas animadas
         function createNote() {
             const note = document.createElement('div');
             note.classList.add('note');
@@ -119,6 +204,8 @@
             document.querySelector('.hearts').appendChild(note);
             setTimeout(() => note.remove(), 5000);
         }
+
+        // Función para controlar la música (reproducir/pause)
         function toggleMusic() {
             const music = document.getElementById("bg-music");
             if (music.paused) {
@@ -129,8 +216,12 @@
                 music.pause();
             }
         }
+
+        // Mostrar mensaje oculto
         function showMessage() {
             document.getElementById("hiddenMessage").style.display = "block";
+            document.getElementById("hiddenMessage2").style.display = "block";
+            document.getElementById("hiddenMessage3").style.display = "block";
         }
     </script>
 </body>
